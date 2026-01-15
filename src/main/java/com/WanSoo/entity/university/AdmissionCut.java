@@ -8,18 +8,34 @@ import lombok.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Builder
-public class AdmissionCut { //연도별 합격 컷 구현 엔티티
+public class AdmissionCut {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private int year;
-
-    @Column(nullable = false)
-    private double cutScore;
-
+    /**
+     * 소속 학과
+     */
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "department_id")
+    @JoinColumn(name = "department_id", nullable = false)
     private Department department;
+
+    /**
+     * 입시 전형 유형 (정시/수시 등)
+     */
+    @Column(nullable = false, length = 20)
+    private String admissionType;
+
+    /**
+     * 합격 기준 점수 (환산 점수)
+     */
+    @Column(nullable = false)
+    private double score;
+
+    /**
+     * 입시 연도
+     */
+    @Column(nullable = false)
+    private int year;
 }
