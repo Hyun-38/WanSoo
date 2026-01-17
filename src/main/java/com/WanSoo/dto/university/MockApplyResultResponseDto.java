@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 @Builder
-public class MockApplyResultResponse {
+public class MockApplyResultResponseDto {
 
     private String universityName;
     private String departmentName;

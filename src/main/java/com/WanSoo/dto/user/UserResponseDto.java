@@ -7,14 +7,14 @@ import lombok.Getter;
 
 @Getter
 @Builder
-public class UserResponse {
+public class UserResponseDto {
 
     private Long id;
     private String email;
     private UserRole role;
 
-    public static UserResponse from(User user) {
-        return UserResponse.builder()
+    public static UserResponseDto from(User user) {
+        return UserResponseDto.builder()
                 .id(user.getId())
                 .email(user.getEmail())
                 .role(user.getRole())

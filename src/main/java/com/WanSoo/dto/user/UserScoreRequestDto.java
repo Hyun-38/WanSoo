@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class UserScoreRequest {
+public class UserScoreRequestDto {
 
     @Min(0) @Max(100)
     private double korean;

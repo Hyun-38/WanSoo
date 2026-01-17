@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 @Builder
-public class UniversityResponse {
+public class UniversityResponseDto {
 
     private Long universityId;
     private String universityName;

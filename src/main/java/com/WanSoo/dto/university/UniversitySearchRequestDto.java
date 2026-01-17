@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class UniversitySearchRequest {
+public class UniversitySearchRequestDto {
 
     private String universityName;
     private String departmentName;

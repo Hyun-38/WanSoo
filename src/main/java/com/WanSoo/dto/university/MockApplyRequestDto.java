@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class MockApplyRequest {
+public class MockApplyRequestDto {
 
     @NotNull
     private Long universityId;

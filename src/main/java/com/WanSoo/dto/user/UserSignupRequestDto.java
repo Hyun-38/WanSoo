@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class UserSignupRequest {
+public class UserSignupRequestDto {
 
     /**
      * 로그인 이메일
